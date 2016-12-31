@@ -1,15 +1,19 @@
-package socketprogram.java;
+package com.socket;
 
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ServerListen {
-
-	public static void main(String[] args) throws IOException {
-
-		ServerSocket serverSocket = new ServerSocket(9091);
+/**
+ * Socket!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ) throws IOException
+    {
+    	ServerSocket serverSocket = new ServerSocket(9091);
 
 		System.out.println("waitig for a client on port "+serverSocket.getLocalPort());
 
@@ -22,8 +26,5 @@ public class ServerListen {
 		System.out.println(input.readLine());
 
 		server.close();
-
-		
-	}
-
+    }
 }
